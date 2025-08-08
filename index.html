@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raksha Bandhan E-Card Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #fff6e5, #ffe3d3);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: #4b2e2e;
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            padding: 30px;
+        }
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #d43f3a;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #5a3b3b;
+        }
+        form {
+            background: #fffaf3;
+            display: inline-block;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin: 15px 0 5px;
+            color: #7a4c3b;
+        }
+        input[type="text"], textarea {
+            width: 300px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+        button {
+            background: linear-gradient(135deg, #ff8a65, #ff7043);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 30px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #ff7043, #ff5722);
+            transform: translateY(-2px);
+        }
+        .decor {
+            position: fixed;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .rakhi {
+            top: 10px; left: 10px;
+            width: 100px;
+            opacity: 0.8;
+        }
+        .laddu {
+            bottom: 20px; right: 20px;
+            width: 90px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Raksha Bandhan</h1>
+        <p>Create a heartfelt E-Card for your sibling 💖</p>
+    </header>
+
+    <form method="POST" action="/generate">
+        <label for="name">Sibling's Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter sibling's name" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" placeholder="Write your heartfelt wish..." required></textarea>
+
+        <button type="submit">Generate My E-Card 🎁</button>
+    </form>
+
+    <!-- Decorative festival images -->
+    <img src="/static/images/rakhi1.png" class="decor rakhi" alt="Rakhi Decoration">
+    <img src="/static/images/tilak1.png" class="Tilak Rakhi" alt="Tilak Decoration">
+</body>
+</html>
